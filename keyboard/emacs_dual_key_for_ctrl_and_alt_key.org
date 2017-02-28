@@ -1,0 +1,41 @@
+#+TITLE:my dvorak layout keyborad settings for Emacs,dual role key for Ctrl and Alt
+
+I will no tell the long stroy,just my settings for keyboard,may not suitable for evereyone,
+but hope someone will like mine,and enjoy it
+
+Most frequently used modifed keys in Emacs are C and M(C is Ctrl,M is Alt)
+to avoiding pinky hurt,we need to remapping C and M to somewhere else,you may need to learn about
+what is dual role key.
+we know that HHKB use Capslock as Ctrl,so we follow it,symmetrically,we use Enter as a Ctrl too,so the
+Enter is a dual role key,when hold it,acting as Ctrl,when tap,acting as Enter,knowing that we lost abillty that
+when hold Enter key,we can't not send contious Enter keys.
+now come with Alt key,you may got the ideas? aren't you?
+make Tab as a dual role,When hold it,acting as Alt,tap as Tab key.
+so,so backslash key has the same fuction.
+
+
+so come the biggest problem,what is the best way the make these settings working on my keyborad,software or hardware,
+I suggest that buy a harware programmble keyboard,try search gh60 on Google,and and you will find some other keyboard like this,
+which is eaisly do the trick upper.
+
+I keep the origin Ctrl and alt there,for compaitble reason,other people can use my keyborad as normal.and do whatever you like to set
+these key to other keys.
++----------+----------+----------+
+|    key   |   hold   |    tap   |
++----------+----------+----------+
+|Caps Lock |   Ctrl   |    None  |
++----------+----------+----------+
+|   Enter  |   Ctrl   |    Enter |
++----------+----------+----------+
+|   Tab    |   Alt    |    Tab   |
++----------+----------+----------+
+|BackSlash |   Alt    | BackSlash|
++----------+----------+----------+
+
+I also put a trick on shift,try read something about space cadet shift,i first use it for my keyborad,but easliy getting woring inputing in
+vim and emacs,then I make it act as like,when tap it,act as a lead key,hold for Shift,after tap it,when you tap r,you will get (,tap u,you will get)
+the r,u are on qwerty layout position,and i put { in f,} in j,[ in v,] in m,you can try your one's,if you have the keyborad I metioned.
+
+there is a spacefn layout out there,similar to spaceemacs,use space as a lead key,you can combine this,make you typping life better,actullay these setting
+have no much association about Dvorak layout,but I suggest use it,there is a lot good reason people said,I found it very suitable for Emacs
+
