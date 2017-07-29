@@ -41,6 +41,6 @@ you have the keyborad I metioned,see table below for more clear understading.
 |  v  |  [  |
 |  m  |  ]  |
 
-there is a spacefn layout out there,similar to spaceemacs,use space as a lead key,you can combine this,make
+there is a [[https://geekhack.org/index.php?topic=51069.0][spacefn]] layout out there,similar to spaceemacs,use space as a lead key,you can combine this,make
 you typping life better,actullay these setting have no much association about Dvorak layout,but I suggest
 use it,there is a lot good reason people said,I found it very suitable for Emacs.
