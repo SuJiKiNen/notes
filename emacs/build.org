@@ -1,12 +1,84 @@
-#+TITLE: build_emacs_26.1 in ubuntu
+#+TITLE: build_emacs_26
 #+DATE: <2017-09-15 Fri>
 #+AUTHOR: SuJiKiNen
 #+EMAIL: SuJiKiNen@gmail.com
 #+LANGUAGE: en
 #+CREATOR: Emacs 26.0.50 (Org mode 9.0.8)
+* ubuntu
+** ./autogen.sh
+ Checking whether you have the necessary tools...
+ (Read INSTALL.REPO for more details on building Emacs)
+ Checking for autoconf (need at least version 2.65) ... missing
 
-* ./autogen.sh
-Checking whether you have the necessary tools...
+ Building Emacs from the repository requires the following specialized programs:
+ autoconf (minimum version 2.65)
+
+ Your system seems to be missing the following tool(s):
+ autoconf (missing)
+
+ If you think you have the required tools, please add them to your PATH
+ and re-run this script.
+
+ Otherwise, please try installing them.
+ On systems using rpm and yum, try: "yum install PACKAGE"
+ On systems using dpkg and apt, try: "apt-get install PACKAGE"
+ Then re-run this script.
+
+ If you do not have permission to do this, or if the version provided
+ by your system is too old, it is normally straightforward to build
+ these packages from source.  You can find the sources at:
+
+ ftp://ftp.gnu.org/gnu/PACKAGE/
+
+ Download the package (make sure you get at least the minimum version
+ listed above), extract it using tar, then run configure, make,
+ make install.  Add the installation directory to your PATH and re-run
+ this script.
+
+ If you know that the required versions are in your PATH, but this
+ script has made an error, then you can simply re-run this script with
+ the --no-check option.
+
+ Please report any problems with this script to bug-gnu-emacs@gnu.org .
+
+** sudo apt-get install autoconf
+** ./autogen.sh
+ Checking whether you have the necessary tools...
+ (Read INSTALL.REPO for more details on building Emacs)
+ Checking for autoconf (need at least version 2.65) ... ok
+ Your system has the required tools.
+ Running 'autoreconf -fi -I m4' ...
+ You can now run './configure'.
+** ./configure
+   configure: error: You do not seem to have makeinfo >= 4.13, and your
+ source tree does not seem to have pre-built manuals in the 'info' directory.
+ Either install a suitable version of makeinfo, or re-run configure
+ with the '--without-makeinfo' option to build without the manuals.
+
+** sudo apt-get install texinfo
+
+** ./configure
+ configure: error: The following required libraries were not found:
+      gnutls
+ Maybe some development libraries/packages are missing?
+ If you don't want to link with them give
+      --with-gnutls=no
+ as options to configure
+** sudo apt-get install libgnutls-dev
+
+** ./configure
+ configure: error: The required function 'tputs' was not found in any library.
+ The following libraries were tried (in order):
+   libtinfo, libncurses, libterminfo, libtermcap, libcurses
+ Please try installing whichever of these libraries is most appropriate
+ for your system, together with its header files.
+ For example, a libncurses-dev(el) or similar package.
+
+** sudo apt-get install libtinfo-dev
+** make
+* centos 6.8(final)
+** ./autogen.sh
+   Checking whether you have the necessary tools...
 (Read INSTALL.REPO for more details on building Emacs)
 Checking for autoconf (need at least version 2.65) ... missing
 
@@ -28,7 +100,7 @@ If you do not have permission to do this, or if the version provided
 by your system is too old, it is normally straightforward to build
 these packages from source.  You can find the sources at:
 
-ftp://ftp.gnu.org/gnu/PACKAGE/
+https://ftp.gnu.org/gnu/PACKAGE/
 
 Download the package (make sure you get at least the minimum version
 listed above), extract it using tar, then run configure, make,
@@ -41,38 +113,4 @@ the --no-check option.
 
 Please report any problems with this script to bug-gnu-emacs@gnu.org .
 
-* sudo apt-get install autoconf
-* ./autogen.sh
-Checking whether you have the necessary tools...
-(Read INSTALL.REPO for more details on building Emacs)
-Checking for autoconf (need at least version 2.65) ... ok
-Your system has the required tools.
-Running 'autoreconf -fi -I m4' ...
-You can now run './configure'.
-* ./configure
-  configure: error: You do not seem to have makeinfo >= 4.13, and your
-source tree does not seem to have pre-built manuals in the 'info' directory.
-Either install a suitable version of makeinfo, or re-run configure
-with the '--without-makeinfo' option to build without the manuals.
-
-* sudo apt-get install texinfo
-
-* ./configure
-configure: error: The following required libraries were not found:
-     gnutls
-Maybe some development libraries/packages are missing?
-If you don't want to link with them give
-     --with-gnutls=no
-as options to configure
-* sudo apt-get install libgnutls-dev
-
-* ./configure
-configure: error: The required function 'tputs' was not found in any library.
-The following libraries were tried (in order):
-  libtinfo, libncurses, libterminfo, libtermcap, libcurses
-Please try installing whichever of these libraries is most appropriate
-for your system, together with its header files.
-For example, a libncurses-dev(el) or similar package.
-
-* sudo apt-get install libtinfo-dev
-* make
+** sudo yum install autoconf
