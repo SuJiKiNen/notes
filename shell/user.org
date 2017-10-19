@@ -1,0 +1,2 @@
+* Create default home directory for existing user
+mkhomedir_helper username
