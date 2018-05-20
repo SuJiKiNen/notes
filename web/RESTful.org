@@ -1,0 +1,10 @@
+RESTful 改变设计 url 的思想,基于资源(Resource)
+
+* [[https://www.v2ex.com/t/118049][用户登入登出设计]]
+** GET /session # 获取会话信息
+** POST /session # 创建新的会话（登入）
+** PUT /session # 更新会话信息
+** DELETE /session # 销毁当前会话（登出）
+
+* 批量操作
+  基于 task
