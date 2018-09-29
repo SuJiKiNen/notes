@@ -1,0 +1,9 @@
+* <2018-09-29 Sat>
+  error msg:
+  #+BEGIN_SRC
+Could not find a version that matches prompt-toolkit<2.0.0,<2.1.0,>=1.0.15,>=2.0.0
+  #+END_SRC
+
+  这个报错,纠结了好一会, ~pipenv lock~ 一直失败.
+
+  后面用 ~pipenv lock --clear~ ,就好了,会清除缓存.
