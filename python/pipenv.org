@@ -1,9 +1,29 @@
 * <2018-09-29 Sat>
   error msg:
   #+BEGIN_SRC
-Could not find a version that matches prompt-toolkit<2.0.0,<2.1.0,>=1.0.15,>=2.0.0
+  Could not find a version that matches prompt-toolkit<2.0.0,<2.1.0,>=1.0.15,>=2.0.0
+  #+END_SRC
+
+  #+BEGIN_SRC
+  Your dependencies could not be resolved. You likely have a mismatch in your sub-dependencies.
+
+  You can use $ pipenv install --skip-lock to bypass this mechanism, then run $ pipenv graph to inspect the situation.
+
+  Hint: try $ pipenv lock --pre if it is a pre-release dependency.
+
   #+END_SRC
 
   这个报错,纠结了好一会, ~pipenv lock~ 一直失败.
 
   后面用 ~pipenv lock --clear~ ,就好了,会清除缓存.
+
+* <2018-10-15 Mon>
+  error msg:
+  #+BEGIN_SRC
+  Could not find a version that satisfies the requirement tabulator==1.15.0 (from -r /home/work/requirements.txt (line 82))
+  (from versions: 0.3.3, 0.3.5, 0.3.6, 0.3.7, 0.3.8, 0.3.9, 0.3.12, 0.3.13, 0.3.14, 0.4.0, 0.5.0, 0.6.0, 0.6.1, 0.6.2, 0.7.0, 0.7.1, 0.7.2, 0.7.4, 0.7.5, 0.7.6, 0.8.0, 0.9.0, 0.10.0, 0.10.1, 0.10.2, 0.10.3, 0.10.4, 0.10.5, 0.11.0, 0.11.1, 0.11.2, 0.12.0, 0.12.1, 0.13.0, 0.14.0, 0.14.1, 0.14.2, 0.15.0, 0.15.1, 1.0.0a1, 1.0.0a4, 1.0.0a5, 1.0.0, 1.1.0, 1.2.0, 1.3.0, 1.3.1, 1.4.1, 1.5.0, 1.6.0, 1.7.0, 1.7.1, 1.8.0, 1.9.0, 1.10.0, 1.11.0, 1.11.1, 1.12.0, 1.12.1, 1.12.2, 1.13.0, 1.14.0, 1.14.1, 1.14.2, 1.14.3, 1.14.4)
+  No matching distribution found for tabulator==1.15.0 (from -r /home/work/requirements.txt (line 82))
+  #+END_SRC
+  用了阿里云的镜像, ~1.15.0~ 这个版本是七天前更新的,看来阿里云还没有同步.
+
+  换回 pip 官方的源就好了.
