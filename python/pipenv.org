@@ -27,3 +27,5 @@
   用了阿里云的镜像, ~1.15.0~ 这个版本是七天前更新的,看来阿里云还没有同步.
 
   换回 pip 官方的源就好了.
+<2018-10-16 Tue>
+  [[https://github.com/pypa/pipenv/issues/2596][pipenv dep resolver sucks!]]
