@@ -1,0 +1,36 @@
+* CentOS release 6.9 (Final) 安装 Python3.6
+
+  1. 添加 iuscommunity 源
+  #+BEGIN_SRC shell
+    yum install -y https://centos6.iuscommunity.org/ius-release.rpm
+
+  #+END_SRC
+
+  2. 安装 python36 相关包
+  #+BEGIN_SRC shell
+    yum install -y python36*
+  #+END_SRC
+
+  Dependencies Resolved
+
+  | Package                          | Arch   | Version              | Repository | Size   |
+  |----------------------------------+--------+----------------------+------------+--------|
+  | Installing:                      |        |                      |            |        |
+  | python36u                        | x86_64 | 3.6.5-1.ius.centos6  | ius        | 55   k |
+  | python36u-debug                  | x86_64 | 3.6.5-1.ius.centos6  | ius        | 2.6  M |
+  | python36u-debuginfo              | x86_64 | 3.6.5-1.ius.centos6  | ius        | 7.6  M |
+  | python36u-devel                  | x86_64 | 3.6.5-1.ius.centos6  | ius        | 917  k |
+  | python36u-gunicorn               | noarch | 19.8.1-1.ius.centos6 | ius        | 219  k |
+  | python36u-libs                   | x86_64 | 3.6.5-1.ius.centos6  | ius        | 9.0  M |
+  | python36u-lxml                   | x86_64 | 4.2.0-1.ius.centos6  | ius        | 1.4  M |
+  | python36u-lxml-debuginfo         | x86_64 | 4.2.0-1.ius.centos6  | ius        | 3.9  M |
+  | python36u-mod_wsgi               | x86_64 | 4.6.2-1.ius.centos6  | ius        | 496  k |
+  | python36u-mod_wsgi-debuginfo     | x86_64 | 4.6.2-1.ius.centos6  | ius        | 406  k |
+  | python36u-pip                    | noarch | 9.0.1-1.ius.centos6  | ius        | 1.8  M |
+  | python36u-redis                  | noarch | 2.10.6-1.ius.centos6 | ius        | 112  k |
+  | python36u-setproctitle           | x86_64 | 1.1.10-2.ius.centos6 | ius        | 16   k |
+  | python36u-setproctitle-debuginfo | x86_64 | 1.1.10-2.ius.centos6 | ius        | 30   k |
+  | python36u-setuptools             | noarch | 39.0.1-1.ius.centos6 | ius        | 774  k |
+  | python36u-test                   | x86_64 | 3.6.5-1.ius.centos6  | ius        | 7.4  M |
+  | python36u-tkinter                | x86_64 | 3.6.5-1.ius.centos6  | ius        | 363  k |
+  | python36u-tools                  | x86_64 | 3.6.5-1.ius.centos6  | ius        | 472  k |

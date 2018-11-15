@@ -1,0 +1,6 @@
+本地已有编译好的 mysql_server
+#+BEGIN_SRC shell
+  export PATH=$PATH:/usr/local/mysql/bin/
+  yum install mysql-devel
+  pip install mysqlclient
+#+END_SRC
