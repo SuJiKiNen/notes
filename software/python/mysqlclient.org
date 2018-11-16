@@ -4,3 +4,8 @@
   yum install mysql-devel
   pip install mysqlclient
 #+END_SRC
+
+#+BEGIN_SRC shell
+  ImportError: libmysqlclient.so.20: cannot open shared object file: No such file or directory
+  export LD_LIBRARY_PATH=/usr/lib64:/usr/local/mysql/lib
+#+END_SRC
