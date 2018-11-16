@@ -1,0 +1,31 @@
+#+BEGIN_SRC
+[core]
+# The home folder for airflow, default is ~/airflow
+airflow_home = ${AIRFLOW_HOME}
+
+# The folder where your airflow pipelines live, most likely a
+# subfolder in a code repository
+# This path must be absolute
+dags_folder = ${AIRFLOW_HOME}/dags
+
+# The folder where airflow should store its log files
+# This path must be absolute
+base_log_folder = ${AIRFLOW_HOME}/logs
+#+END_SRC
+
+or
+
+#+BEGIN_SRC
+export AIRFLOW__CORE__AIRFLOW_HOME=/path/to/airflow/home
+export AIRFLOW__CORE__DAGS_FOLDER=/path/to/airflow/dags
+export AIRFLOW__CORE__BASE_LOG_FOLDER=/path/to/airflow/logs
+#+END_SRC
+
+
+but, there still one place need to change.
+
+#+BEGIN_SRC
+child_process_log_directory = ${AIRFLOW_HOME}/logs/scheduler
+#+END_SRC
+
+works like a charm
