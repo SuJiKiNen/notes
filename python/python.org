@@ -17,3 +17,6 @@
 多个线程操作,需要对资源加锁
 
 不然会出现脏读等现象
+
+
+[[https://medium.com/@adriennedomingus/the-perils-of-get-or-create-race-conditions-485fc8fb2068][another story]]
