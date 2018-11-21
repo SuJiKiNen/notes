@@ -1,0 +1,19 @@
+#+BEGIN_SRC  python
+  cached = {}
+
+
+  def get_or_create(key, val):
+      if key not in cached:
+          cached[key] = val
+#+END_SRC
+
+上面可能出现在判断时是不存在字典中,
+
+判断后,另一个线程往字典里写了
+
+[[https://stackoverflow.com/questions/4542344/modifying-a-python-dictionary-from-different-threads][dict_with_threads]]
+
+
+多个线程操作,需要对资源加锁
+
+不然会出现脏读等现象
