@@ -1,0 +1,21 @@
+can't view logger from web UI in standalone mode
+
+add a custom function to get ip
+
+#+BEGIN_SRC python
+hostname_callable = dags.utils:get_ip
+#+END_SRC
+
+#+BEGIN_SRC python
+def get_ip():
+    net_int_name = os.environ['NET_INT_NAME']
+    ip = netifaces.ifaddresses(net_int_name)[netifaces.AF_INET][0]['addr']
+    return ip
+#+END_SRC
+
+add dags parent folder to PYTHONPATH avoding can't ~get_ip~
+
+
+airflow webserver call gunicorn
+
+this [[https://github.com/benoitc/gunicorn/issues/1349][issue]] seems add CWD to PYTHONPATH,but still can't find ~get_ip~
