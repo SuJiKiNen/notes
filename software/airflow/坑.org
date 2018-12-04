@@ -1,0 +1,3 @@
+* webserver scheduler  daemon 模式无法启动
+
+  意外关闭导致 pid 文件残留,手工删除 pid 文件
