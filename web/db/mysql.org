@@ -1,1 +1,15 @@
 1. ~truncate table_name~ will reset =auto_increment=
+2. between is [min,max]
+3. date range
+#+BEGIN_SRC
+WHERE datetimecol >= '2012-12-01'
+  AND datetimecol <  '2012-12-02'
+#+END_SRC
+#+BEGIN_SRC
+WHERE datetimecol between '2012-12-01'
+  AND '2012-12-02'
+#+END_SRC
+
+between is faster? but not good for one
+
+day interval query,it has overlapping
