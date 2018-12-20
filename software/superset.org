@@ -1,0 +1,13 @@
+* error msg
+  #+BEGIN_SRC shell
+  if perm_view.permission.name not in base_permissions:
+  AttributeError: 'NoneType' object has no attribute 'name'
+  2018-10-09 02:28:50,041:ERROR:flask_appbuilder.base:Add Permission on View Error: 'NoneType' object has no attribute 'name'
+  #+END_SRC
+
+
+  #+BEGIN_SRC sql
+  SET FOREIGN_KEY_CHECKS=0;
+  delete FROM `ab_permission_view` where permission_id is null;
+  SET FOREIGN_KEY_CHECKS=1;
+  #+END_SRC
