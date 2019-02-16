@@ -1,0 +1,15 @@
+* apt-get update 的时候卡住不动
+  #+BEGIN_SRC shell
+    apt-get update
+    0% [Working]
+  #+END_SRC
+
+  从 caffe 的 gpu 镜像基础上构建新的 docker
+
+  一直卡在%0,后面把 nvidia 的源删掉就好了
+
+  应该访问不通导致一直卡住.
+
+  #+BEGIN_SRC
+    RUN rm /etc/apt/sources.list.d/*
+  #+END_SRC
