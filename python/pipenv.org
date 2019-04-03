@@ -29,3 +29,8 @@
   换回 pip 官方的源就好了.
 <2018-10-16 Tue>
   [[https://github.com/pypa/pipenv/issues/2596][pipenv dep resolver sucks!]]
+
+<2019-04-03 Wed>
+** pipenv couldn't handle typo gracefully in package name while installing
+
+** 注意使用国内源,resolve 的过程才会变快
